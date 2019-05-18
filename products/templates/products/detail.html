@@ -1,0 +1,52 @@
+ {% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="row"> 
+    <div class="col-2">
+    <img src= " " class="img-fluid"/>
+    </div>
+    <div class="col-10">
+        <h1>Response Recorded</h1></br></br></br>
+
+        <!-- <h2>{{product.name}}</h2>
+        <h2>{{product.title}}</h2>
+        <hr>
+        <h2>{{product.body}}</h2>
+        <hr>
+        <h2>{{product.url}}</h2>
+        <hr>
+        <h2>{{product.summary}}</h2> -->
+
+        <div class="container">            
+                <table class="table table-striped">
+                  <thead>
+                              <tr>
+                                <th>USER</th>
+                                <th>Response 1</th>
+                                <th>Response 2</th> 
+                                <th>Response 3</th>
+                                <th>Response 4</th>
+                              </tr>
+                              </thead>
+                              
+                   {% for event in event_list %}          
+                    <tbody>
+                        <tr>
+                              <td>{{event.name}}</td>
+                              <td>{{event.title}}</td>
+                              <td>{{event.body}}</td>
+                              <td>{{event.url}}</td>
+                              <td>{{event.summary}}</td>
+                          </tr>     
+                     </tbody>
+                  {% endfor %}
+                </table>
+                </div>
+
+  </div>
+</div>
+<br>
+<br>
+{% endblock %}
+

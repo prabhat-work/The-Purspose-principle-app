@@ -10,22 +10,26 @@
 {% endif %}
  
 
-<h1>Login</h1>
+
+<div class="form-group col-lg-6">
+    <h1>Login</h1>
 <form method="POST" action="{% url 'login' %}">
     
     {% csrf_token %}
     </br>
     Username:</br>
-  <input type="text" name="username"/> 
+    <div class="col-xs-2">
+  <input type="text" class="form-control" name="username"  placeholder="Enter Username"/> 
+  </div>
 </br>
     Password:</br>
-   <input type="password" name="password"/>
+   <input type="password"  class="form-control" name="password" placeholder="Password"/>
 </br>
 </br>
-<input class="btn btn-primary" type="submit" value=login!>
+<input class="btn btn-primary" type="submit" value=Login>
 </br>
-
 </form>
+</div>
 {% endblock %}
 
 

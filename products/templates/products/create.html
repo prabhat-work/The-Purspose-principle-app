@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %} {% if error %} {{error}}
+<br />
+<br /> {% endif%}
+
+
+
+<h1>Answer the Following Questions </h1>
+<body>
+<div class="ar_form">
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+  
+    Your name
+    <br/>
+    <input type="text" name="name" required>
+    <br/> What you love ?
+    <br/>
+    <input type="text" name="title" required>
+
+    <br/> What you are good at ?
+    <br/>
+    <input type="text" name="body" required>
+    <br/> What you can be paid for ?
+    <br/>
+    <input type="text" name="url" required>
+    <br/> Why the world needs ?
+    <br/>
+    <input type="text" name="summary" required>
+    <br />
+     <br/>
+     <!--  
+    <input type="textbox" name="body">
+    <br/> -->
+    <input class="btn btn-primary" type="submit" value="Predict">
+
+</form>
+</div>
+</body>
+
+{% endblock %}
